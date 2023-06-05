@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Table Tag </title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <h1>
+        < 테이블 태그>
+    </h1>
+    <h3> 오늘의 날씨 </h3>
+
+    <!--
+        table
+            thead : 테이블 header 영역
+            tbody : 테이블 body 영역
+            tfoot : 테이블 footer 영역
+            th : 타이틀표시, 기본 bold, align center
+            tr : 행 구분
+            td : 열 구분 및 내용
+    -->
+
+    <table class="tab" border="1">
+        <thead align="center">
+            <th>th 영역</th>
+            <th>th 영역</th>
+        </thead>
+        <tbody>
+            <tr align="center">
+                <td>td</td>
+                <td>td</td>
+            </tr>
+            <tr align="center">
+                <td>td</td>
+                <td>td</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr align="center">
+                <td>td</td>
+                <td>td</td>
+            </tr>
+        </tfoot>
+    </table>
+    <hr>
+    <table border="1" bgcolor="#f2e0a1">
+        <tr>
+            <th width="140px">지역</th>
+            <td width="80px" align="center">서울</td>
+            <td width="80px" align="center">경기도</td>
+            <td width="80px" align="center">강원도</td>
+            <td width="80px" align="center">경상도</td>
+            <td width="80px" align="center">충청도</td>
+            <td width="80px" align="center">전라도</td>
+        </tr>
+        <tr>
+            <th>현재기온</th>
+            <td align="center">24</td>
+            <td align="center">26</td>
+            <td align="center">27</td>
+            <td align="center">23</td>
+            <td align="center">21</td>
+            <td align="center">29</td>
+        </tr>
+    </table>
+    <hr>
+    <table border="1" bgcolor="#eee">
+        <tr>
+            <th width="140px">지역</th>
+            <th width="80px" align="center">현재기온</th>
+        </tr>
+        <tr>
+            <th>서울</th>
+            <td align="center">24</td>
+        </tr>
+        <tr>
+            <th>경기도</th>
+            <td align="center">25</td>
+        </tr>
+        <tr>
+            <th>강원도</th>
+            <td align="center">23</td>
+        </tr>
+        <tr>
+            <th>충청도</th>
+            <td align="center">26</td>
+        </tr>
+        <tr>
+            <th>경상도</th>
+            <td align="center">27</td>
+        </tr>
+        <tr>
+            <th>전라도</th>
+            <td align="center">29</td>
+        </tr>
+    </table>
+    <hr>
+    <table border="1" bgcolor="#ddd">
+        <tr>
+            <th width="100px">No</th>
+            <th width="100px">Title</th>
+            <th width="100px">writer</th>
+            <th width="100px">views</th>
+        </tr>
+        <tr align="center">
+            <td>3</td>
+            <td>Test1</td>
+            <td>user2</td>
+            <td>0</td>
+        </tr>
+        <tr align="center">
+            <td>2</td>
+            <td>Test1</td>
+            <td>user1</td>
+            <td>1</td>
+        </tr>
+        <tr align="center">
+            <td>1</td>
+            <td>Test1</td>
+            <td>admin</td>
+            <td>1</td>
+        </tr>
+    </table>
+    <hr>
+    <table border="1">
+        <tr>
+            <th>이름</th>
+            <th colspan="4">연락처</th>
+            <th>주소</th>
+        </tr>
+        <tr>
+            <td>이름</td>
+            <td>hp</td>
+            <td>010-000-0000</td>
+            <td>email</td>
+            <td>email@email.com</td>
+            <td>주소</td>
+        </tr>
+    </table>
+    <hr>
+    <table border="1">
+        <tr align="center">
+            <th width="100px"> No </th>
+            <td width="100px"> Fruit </td>
+            <td width="100px"> Order by </td>
+            <td width="100px"> Price </td>
+            <td width="100px"> Amount </td>
+        </tr>
+        <tr align="right">
+            <td>1</td>
+            <td rowspan="3">사과</td>
+            <td>팀쿡</td>
+            <td>3000</td>
+            <td>20</td>
+        </tr>
+        <tr align="right">
+            <td>2</td>
+            <td>잡스</td>
+            <td>3000</td>
+            <td>30</td>
+        </tr>
+        <tr align="right">
+            <td>3</td>
+            <td>이재용</td>
+            <td>3000</td>
+            <td>40</td>
+        </tr>
+        <tr align="right">
+            <td>4</td>
+            <td>딸기</td>
+            <td>장원영</td>
+            <td>5000</td>
+            <td>10</td>
+        </tr>
+        <tr align="right">
+            <td>5</td>
+            <td>수박</td>
+            <td>조나단</td>
+            <td>8000</td>
+            <td>3</td>
+        </tr>
+        <tr align="right">
+            <td>4</td>
+            <td>망고</td>
+            <td>조철봉</td>
+            <td>8000</td>
+            <td>5</td>
+        </tr>
+    </table>
+</body>
+
+</html>

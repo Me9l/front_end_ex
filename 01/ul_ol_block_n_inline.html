@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> UL / OL </title>
+    <style>
+        span,
+        div,
+        p {
+            border: 1px solid black;
+        }
+        hr {
+            height: 5px;
+            size: 3px;
+            width: 70%;
+            background-color: aqua;
+        }
+        ul {
+            border: 1px solid green;
+        }
+        li {
+            border: 1px dotted red;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 
+        ul - 순서 없는 목록
+        ol - 순서 있는 목록
+
+        inline tag - a , span , img
+        block tag - div , h1 ~ h6 , ul , ol
+     -->
+    <h3>H3 Tag</h3>
+    <hr>
+    <span> this is Span </span>
+    <span> span is Inline Tag </span>
+    <hr>
+    <div>
+        this is div
+    </div>
+    <div>
+        div is BlockTag
+    </div>
+    <hr>
+    <div>div > p
+        <p> this is p </p>
+        <p> p is BlockTag </p>
+    </div>
+    <hr>
+    <ul>
+        <li> ul, style = "list-style-type" </li>
+        <li> default </li>
+    </ul>
+    <ul style="list-style-type: circle;">
+        <li> ul, style = "list-style-type : " </li>
+        <li> circle </li>
+    </ul>
+    <ul style="list-style-type: lower-alpha;">
+        <li> ul, style = "list-style-type : " </li>
+        <li> lower-alpha </li>
+    </ul>
+    <ul style="list-style-type: none;">
+        <li> ul, style = "list-style-type : " </li>
+        <li> none (가장 많이 사용) </li>
+    </ul>
+    <ul style="list-style-type: upper-roman;">
+        <li> ul, style = "list-style-type : " </li>
+        <li> upper-roman </li>
+    </ul>
+    <hr>
+    <ol>
+        <li> ol, type </li>
+        <li> default </li>
+    </ol>
+    <ol type="A">
+        <li> ol, type="A" </li>
+        <li> ol, type="A" </li>
+    </ol>
+    <ol type="a">
+        <li> type="a" </li>
+        <li> type="a" </li>
+    </ol>
+    <ol type="i">
+        <li> ol, type="i" </li>
+        <li> ol, type="i" </li>
+    </ol>
+    <ol type="I">
+        <li> ol, type="I" </li>
+        <li> ol, type="I" </li>
+    </ol>
+    
+    <ul style="list-style-type: none; border: none; display: flex;">
+        <li> | 회사 소개 | </li>
+        <li> 게시판 |</li>
+        <li> 마이페이지 | </li>
+        <li onclick="alert('응 안돼')"> 로그인 | </li>
+        <li> 회원 가입 | </li>
+    </ul>
+
+</body>
+
+</html>
