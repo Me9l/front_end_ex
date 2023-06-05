@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .hi {
+            font-size: 2em;
+            border: 2px solid red;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="hi">
+        error 404</br>
+        File&nbsp;Not&nbsp;Found&nbsp;Exception
+    </h1>
+    <h2> H2 태그 </h2>
+    <h3> H3 태그 </h3>
+    <h5> H5 Tag </h5>
+    <h6> H6 Tag </h6>
+
+    <!--
+        Anchor Tag <a href="htag.html">link to H tag</a>
+            href : 절대경로와 상대경로로 설정
+            상대경로 : 현재 폴더를 기준으로 경로설정
+            절대경로 : C:\user\temp ...
+                원격 서버의 OS 환경등을 고려해야한다.
+     -->
+     <a href="https://www.naver.com/">Naver</a><br>
+     <a href="https://www.google.com/">Google</a><br>
+     <a href="01/h_tag.html"> H Tag Link >></a></br>
+    </body>
+<script>
+    function consoleLog() {
+        console.log("aaaa");
+    }
+
+    var ch = document.querySelector(".hi");
+    ch.onclick = function() {
+        consoleLog();
+    };
+</script>
+</html>
