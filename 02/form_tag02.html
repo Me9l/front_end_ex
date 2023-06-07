@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FormTag</title>
+</head>
+
+<body>
+    <!-- 
+        form에 사용되는 태그 (Client to Server)
+            - input
+                type="text"         : 문자열.
+                type="password"     : 비밀번호.
+                type="email"        : 이메일.
+                type="radio"        : 선택. (택1)
+                type="checkbox"     : 선택. (다중선택)
+                type="file"         : 파일첨부.
+                type="submit"       : 전송.
+                type="reset"        : 입력취소(모두초기화).
+
+            - select    : 드롭다운박스 중 하나 선택.
+                option  : 선택 리스트.
+
+            - textarea  : 글 입력.
+            - 
+    -->
+    <form name="myForm3" action="request.do" method="GET">
+        <h3>회원가입</h3>
+        <table border="1" width="640px" align="center">
+            <tr>
+                <td><label for="name">이름</label></td>
+                <td><input type="text" name="name" id="name" placeholder="Enter Your Name."></td>
+            </tr>
+            <tr>
+                <td>아이디</td>
+                <td>
+                    <input type="text" name="id" id="id" placeholder="Enter Your ID.">
+                    <input type="button" name="idCheck" id="idCheck" value="아이디 중복 확인">
+                </td>
+
+            </tr>
+            <tr>
+                <td>비밀번호</td>
+                <td><input type="password" name="pw" id="id" placeholder="Enter Your Password."></td>
+            </tr>
+            <tr>
+                <td>비밀번호 확인</td>
+                <td><input type="password" name="pw" id="id" placeholder="Enter Your Password Again."></td>
+            </tr>
+            <tr>
+                <td>이메일</td>
+                <td><input type="text" name="email" id="email" placeholder="Enter Your Email."></td>
+            </tr>
+            <tr>
+                <td>성별</td>
+                <td>
+                    <label for="male"><input type="radio" name="gender" id="male" checked>남성</label>
+                    <label for="female"><input type="radio" name="gender" id="female">여성</label>
+                </td>
+            </tr>
+            <tr>
+                <td>연락처</td>
+                <td>
+                    <select name="nation">
+                        <option value="082" selected>대한민국</option>
+                        <option value="044">영국</option>
+                        <option value="084">베트남</option>
+                        <option value="852">홍콩</option>
+                        <option value="960">몰디브</option>
+                        <option value="065">싱가포르</option>
+                    </select>
+                    <select name="mobilecode">
+                        <option value="010" selected>010</option>
+                        <option value="011">011</option>
+                        <option value="016">016</option>
+                        <option value="019">019</option>
+                    </select>
+                    <input type="text" name="" maxlength="4">
+                    <input type="text" name="" maxlength="4">
+                </td>
+            </tr>
+            <tr>
+                <td>주소</td>
+                <td>
+                    <select name="select" id="select">
+                        <optgroup>
+                            <option value="none">------</option>
+                            <option value="seoul">서울시</option>
+                            <option value="kyungi">경기도</option>
+                        </optgroup>
+                        <option value="kangwon">강원도</option>
+                        <option value="chungcheong">충청도</option>
+                        <option value="kyungsang">경상도</option>
+                        <option value="jeonra">전라도</option>
+                    </select>
+                    <input type="text" name="addr" id="addr" placeholder="Enter Your Address.">
+                </td>
+            </tr>
+            <tr>
+                <td>사용 기술</td>
+                <td>
+                    <input type="checkbox" name="stack1" value="v1"> HTML
+                    <input type="checkbox" name="stack2" value="v2"> CSS
+                    <input type="checkbox" name="stack3" value="v3"> JavaScript
+                    <input type="checkbox" name="stack4" value="v4"> React
+                    <input type="checkbox" name="stack5" value="v5"> Spring
+                    <input type="checkbox" name="stack6" value="v6"> MySQL
+                </td>
+            </tr>
+            <tr>
+                <td>자기소개</td>
+                <td>
+                    <textarea name="profile" id="profile" cols="70" rows="10" placeholder="내용 입력."
+                        style="resize: none;"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>첨부파일</td>
+                <td>
+                    <input type="file" name="file"> * 10MB 이하만 첨부 가능.
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="right"><input type="submit" value="Submit"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>

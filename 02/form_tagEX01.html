@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        tr:not(:last-child) > td:first-child {
+            text-align: right;
+            background-color: bisque;
+        }
+        sup,span {
+            color: red;
+        }
+        .birth > input, .auth > input , .addr > input {
+            width: 80px;
+        }
+        .tel td > input {
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h3> 회원가입 </h3>
+    <form action="joinPost" method="POST">
+        <table>
+            <tr>
+                <td> 아 이 디 </td>
+                <td>
+                    <sup>&#42;</sup>
+                    <input type="text" name="id" id="id">
+                    <input type="button" value="ID중복검사"><br>
+                    아이디는 영문,숫자,조합으로 하셔야합니다. [4자리 이상 12자리 이하.]<br>
+                    아이디는 <span>소문자</span>로 저장됩니다.
+                </td>
+            </tr>
+            <tr>
+                <td> 암 &emsp; 호 </td>
+                <td>
+                    <sup>&#42;</sup>
+                    <input type="password" name="pw1" id="pw1"><br>
+                    비밀번호는 4자리 이상 12자리 이하로 입력해주세요.
+                </td>
+            </tr>
+            <tr>
+                <td> 암호확인 </td>
+                <td>
+                    <sup>*</sup>
+                    <input type="password" name="pw2" id="pw2">
+                </td>
+            </tr>
+            <tr>
+                <td> 이 &emsp; 름 </td>
+                <td>&nbsp;
+                    <input type="text" name="userName" id="userName"><br>
+                </td>
+            </tr>
+            <tr>
+                <td> 대 화 명 </td>
+                <td>&nbsp;
+                    <input type="text" name="userName" id="userName">
+                    <input type="button" value="중복검사"><br>
+                    대화명을 지정하지 않으시면 회원님의 이름으로 대화명이 지정됩니다.<br>
+                    대화명은 한글, 영문 관계없이 10글자 이내로 작성.
+                </td>
+            </tr>
+            <tr>
+                <td> 주민등록번호 </td>
+                <td class="auth">
+                    <sup>*</sup>
+                    <input type="text" name="auth1" id="auth1" maxlength="6"> -
+                    <input type="text" name="auth2" id="auth2" maxlength="7">
+                </td>
+            </tr>
+            <tr>
+                <td> 생년월일 </td>
+                <td class="birth">
+                    <sup>*</sup>
+                    <input type="text" name="birthY" id="birthY" maxlength="4">년
+                    <input type="text" name="birthM" id="birthM" maxlength="2">월
+                    <input type="text" name="birthD" id="birthD" maxlength="2">일
+                </td>
+            </tr>
+            <tr>
+                <td> 성 &emsp; 별 </td>
+                <td>
+                    <sup>*</sup>
+                    <label><input type="radio" name="gender" value="male">남자</label>
+                    <label><input type="radio" name="gender" value="female">여자</label>
+                </td>
+            </tr>
+            <tr>
+                <td> E - Mail </td>
+                <td>
+                    <sup>*</sup>
+                    <input type="text" name="email" id="email">
+                </td>
+            </tr>
+            <tr>
+                <td> 메일수신 </td>
+                <td>
+                    <sup>*</sup>
+                    <label><input type="radio" name="mailAcpt" value="1">수신동의</label>
+                    <label><input type="radio" name="mailAcpt" value="0">수신거부</label>
+                </td>
+            </tr>
+            <tr>
+                <td> 우편번호 </td>
+                <td class="addr">
+                    <sup>*</sup>
+                    <input type="text" name="addr1" id="addr1"> -
+                    <input type="text" name="addr2" id="addr2">
+                    <input type="button" value="검색">
+                </td>
+            </tr>
+            <tr>
+                <td> 주 &emsp; 소 </td>
+                <td>
+                    <sup>*</sup>
+                    <input type="text" name="addr3" id="addr3" style="width: 200px;"><br>&nbsp;
+                    <input type="text" name="addr4" id="addr4" style="width: 120px;">
+                </td>
+            </tr>
+            <tr class="tel">
+                <td> 전화번호 </td>
+                <td>
+                    <sup>*</sup>
+                    <select id="tel1">
+                        <option value="02" >02 </option>
+                        <option value="031">031</option>
+                        <option value="032">032</option>
+                        <option value="033">033</option>
+                        <option value="041">041</option>
+                        <option value="042">042</option>
+                        <option value="043">043</option>
+                        <option value="051">051</option>
+                        <option value="052">052</option>
+                        <option value="053">053</option>
+                        <option value="054">054</option>
+                        <option value="055">055</option>
+                        <option value="061">061</option>
+                        <option value="062">062</option>
+                        <option value="063">063</option>
+                        <option value="064">064</option>
+                        <option value="064">070</option> 
+                    </select> -
+                    <input type="text" maxlength="4"> -
+                    <input type="text" maxlength="4">
+                </td>
+            </tr>
+            <tr class="tel">
+                <td> 핸 드 폰 </td>
+                <td>
+                    <sup>*</sup>
+                    <select name="tel2">
+                        <option value="010">010</option>
+                        <option value="011">011</option>
+                        <option value="016">016</option>
+                        <option value="017">017</option>
+                        <option value="019">019</option>
+                    </select> -
+                    <input type="text" maxlength="4"> -
+                    <input type="text" maxlength="4">
+                </td>
+            </tr>
+            <tr>
+                <td> 직 &emsp; 업 </td>
+                <td>&nbsp;
+                    <select name="job">
+                        <option selected> 선택하세요 </option>
+                        <option value="student"> 학생 </option>
+                        <option value="teacher"> 교사 </option>
+                        <option value="none"> 무직 </option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td> 취 &emsp; 미 </td>
+                <td>
+                    <sup>*</sup>
+                    <label><input type="checkbox" name="sport" value="sport">스포츠</label>
+                    <label><input type="checkbox" name="shopping" value="shopping">쇼핑</label>
+                    <label><input type="checkbox" name="webSerf" value="webSerf">인터넷</label>
+                    <label><input type="checkbox" name="trip" value="trip">여행</label>
+                    <label><input type="checkbox" name="read" value="read">독서</label>
+                    <label><input type="checkbox" name="movie" value="movie">영화감상</label>
+                    <label><input type="checkbox" name="music" value="music">음악감상</label>
+                </td>
+            </tr>
+            <tr>
+                <td> 자기소개 </td>
+                <td>&nbsp;
+                    <textarea name="intro" cols="80" rows="8" style="resize: none;"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td align="center">
+                    <input type="submit" value="등록">&emsp;&emsp;&emsp;
+                    <input type="reset" value="취소">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
