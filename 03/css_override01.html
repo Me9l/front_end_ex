@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> CSS 우선순위 </title>
+    <link rel="stylesheet" href="/03/css/css_apply01.css">
+    <style>
+        .p1 {
+            background-color: rgb(200,100,170);
+        }
+        .p2 {
+            font-size: 24px;
+        }
+        .p3 {
+            background-color: aquamarine !important;
+            font-size: 2em;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        CSS 는 상속, 누적적용, 같은항목에 대해 충동 발생 가능.
+        1. 브라우저 기본 CSS
+        2. 외부 Stylesheet CSS
+        3. 내부 Stylesheet CSS
+        4. inline CSS (element)
+        5. !important CSS          <우선순위 높음>
+
+        Element : 객체, DOM (Document Object Model)
+     -->
+     <p class="p1">CSSCSSCSSCSSCSSCSSCSSCSS(outer stylesheet, inner stylesheet)</p>
+     <p class="p2" style="background-color: wheat;">CSSCSSCSSCSSCSSCSSCSSCSS(outer,inner,inline)</p>
+     <p class="p3" style="background-color:  olivedrab;">CSSCSSCSSCSSCSSCSSCSSCSS(outer,inner,inline,!important)</p>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOX(DIV)</title>
+    <style>
+        div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            transition: 1s ease-in;
+        }
+        div:hover {
+            transform: rotate3d(0, 1, -0.5, 360deg);
+        }
+        span {
+            color: red;
+        }
+
+        a {
+            text-decoration: none;
+            background-color: lightgrey;
+            margin: 10px;
+            padding: 16px;
+            color: inherit;
+        }
+
+        .anchor {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 60px;
+            height: 40px;
+            border-top: 1px solid black;
+            border-bottom: 1px solid black;
+            border-radius: 10%;
+        }
+        .circle {
+            width: 50px;
+            height: 50px;
+            background-color: aquamarine;
+            border: none;
+            border-radius: 50%;
+            animation-duration: 3s;
+            animation-name: slide;
+        }
+            @keyframes slide {
+            from {
+                margin-left: 100%;
+            }
+
+            to {
+                margin-left: 0%;
+            }
+            }
+    </style>
+</head>
+<body>
+    <!-- 
+        block Tag : div, ul, ol, li, h1~h6, p, table ...
+        inline Tag : span, a, img ...
+     -->
+    <h3> BOX Model </h3>
+    <div> BOX 1 </div>
+    <div> BOX 2 </div>
+    <div> BOX 3 </div>
+    <span> Span 1 </span>
+    <span> Span 2 </span>
+    <span> Span 3 </span>
+    <br><br><br>
+    <a href="https://www.google.com/"> Google </a>
+    <a href="https://www.naver.com/"> Naver </a>
+    <a href="https://www.daum.net/"> Daum </a>
+    <p class="anchor"> Button </a>
+    <div class="circle"></div>
+</body>
+</html>

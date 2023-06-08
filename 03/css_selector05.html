@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectors</title>
+    <style>
+        /* 후손 선택자 */
+        div h2 { color: red; }
+        div ul { color: orange; }
+        /* 가상 선택자 */
+        ul li:last-child { color: yellow; }
+        /* 자식 선택자 */
+        div>h3 { color: yellow; }
+        h3 > .p1 { color: green; }
+        /* 인접 형제 선택자 */
+        h3+p { color: red; }
+
+    </style>
+</head>
+<body>
+    <h3>선택자 : 후손 (공백) , 자식 ( > ) , 인접 형제 ( + ) , 일반 형제 ( ~ ) , 그룹 ( , ) </h3>
+    <!-- 
+
+     -->
+    
+    <div>
+        <h2> 후손 선택자 1 : 제목 </h2>
+        <ul>
+            <li>aaaaaaa</li>
+            <li>bbbbbbb</li>
+        </ul>
+    </div>
+    <h2> 후손 선택자 2 : 제목 </h2>
+
+    <div>
+        <h3> 자식 선택자 1 </h3>
+    </div>
+
+    <h3> 자식 선택자 </h3>
+
+    <h3>
+        <p class="p1">000001</p>
+        <p>000002</p>
+        <p>admin</p>
+        <p class="p1">
+            <p>aaaaaaaaaaaaaaaaaaaaa</p>
+            <p class="p1">tel : 02)0000-0000</p>
+            <p class="p1">phone : 010)0000-0000</p>
+        </p>
+    </h3>
+    <p>cccccccccccccccccccccccccccc</p>
+</body>
+</html>

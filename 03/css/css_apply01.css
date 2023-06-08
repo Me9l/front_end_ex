@@ -2,3 +2,14 @@ h5 {
     font-size: 2em;
     text-shadow: 10px 5px olive;
 }
+.p1 {
+    background-color: whitesmoke;
+    font-family: 'Courier New', Courier, monospace;
+}
+.p2 {
+    background-color: whitesmoke;
+    color: darkcyan;
+}
+.p3 {
+    background-color: whitesmoke;
+}

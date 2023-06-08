@@ -27,7 +27,7 @@
             - textarea  : 글 입력.
             - 
     -->
-    <form name="myForm3" action="request.do" method="GET">
+    <form name="myForm3" action="request.jsp" method="GET">
         <h3>회원가입</h3>
         <table border="1" width="640px" align="center">
             <tr>
@@ -86,15 +86,14 @@
                 <td>주소</td>
                 <td>
                     <select name="select" id="select">
-                        <optgroup>
-                            <option value="none">------</option>
+                        <optgroup label="시/도 선택">
                             <option value="seoul">서울시</option>
                             <option value="kyungi">경기도</option>
+                            <option value="kangwon">강원도</option>
+                            <option value="chungcheong">충청도</option>
+                            <option value="kyungsang">경상도</option>
+                            <option value="jeonra">전라도</option>
                         </optgroup>
-                        <option value="kangwon">강원도</option>
-                        <option value="chungcheong">충청도</option>
-                        <option value="kyungsang">경상도</option>
-                        <option value="jeonra">전라도</option>
                     </select>
                     <input type="text" name="addr" id="addr" placeholder="Enter Your Address.">
                 </td>
