@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIV</title>
+    <style>
+        div {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px;
+            width: 100px;
+            height: 100px;
+            background-color: lightblue;
+        }
+        .solid  { border-style: solid; }
+        .dotted { border-style: dotted; }
+        .double { border-style: double; }
+        .groove { border-style: groove; }
+        .dashed { border-style: dashed; }
+        .outset { border-style: outset; }
+        .inset  { border-style: inset; }
+        .ridge  { border-style: ridge; }
+        .hidden { border-style: hidden; }
+        .none   { border-style: none; }
+        
+        .hidden:hover { border-style: outset; }
+        .none:hover {
+            border-style: inset;
+            letter-spacing: 0.5em;
+        }
+
+        .mixed  { border-style: solid double groove ridge; }
+    </style>
+</head>
+<body>
+    <h3> Div Border </h3>
+    <hr>
+    <!-- 
+        border style
+        solid, dashed, double, dotted, groove, inset, outset, ridge, hidden, none
+     -->
+     <div class="solid"> solid </div>
+     <div class="dotted"> dotted </div>
+     <div class="double"> double </div>
+     <div class="groove"> groove </div>
+     <div class="dashed"> dashed </div>
+     <div class="outset"> outset </div>
+     <div class="inset"> inset </div>
+     <div class="ridge"> ridge </div>
+     <div class="hidden"> hidden </div>
+     <div class="none"> none </div>
+     <div class="mixed"> mixed </div>
+</body>
+</html>

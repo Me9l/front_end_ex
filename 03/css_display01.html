@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .floatdiv {
+            float: left;
+            width: 200px;
+            height: 200px;
+            border: 1px solid lightslategray;
+        }
+        .floatdiv>div {
+            float: left;
+            width: 60px;
+            height: 60px;
+            margin: 2px;
+            border: 1px solid lightcoral;
+        }
+        .flexdiv {
+            display: flex;
+            width: 300px;
+            height: 300px;
+            border: 1px solid grey;
+        }
+        .flexdiv>div {
+            width: 60px;
+            height: 60px;
+            margin: 2px;
+            border: 1px solid lightcoral;
+        }
+        </style>
+</head>
+<body>
+    <div class="floatdiv">
+        <div class="div1">div1</div>
+        <div class="div2">div2</div>
+        <div class="div3">div3</div>
+    </div>
+    <div class="flexdiv">
+        <div class="div4">div4</div>
+        <div class="div5">div5</div>
+    </div>
+</body>
+</html>

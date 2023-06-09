@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radius</title>
+    <style>
+        div {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin: 10px;
+            width: 100px;
+            height: 100px;
+            background-color: thistle;
+        }
+        .div1 { border-radius: 10px; }
+        .div2 { border-radius: 20%; }
+        .div3 { border-radius: 30%; }
+        .div4 { border-radius: 40%; }
+        .div5 { border-radius: 50%; }
+        .div6 { border-radius: 0px 10px 20px 30px;}
+        .div7 { border-start-end-radius: 20% 50%; }
+        .div8 {
+            border-start-start-radius: 20%;
+            border-start-end-radius: 40%;
+            border-end-end-radius: 50% 20%;
+            border-end-start-radius: 20% 50%;
+        }
+        .div9 {
+            border: 1px solid black;
+            background:linear-gradient(-45deg, transparent 15px, thistle 0);
+        }
+        .div10 {
+            background:brown;
+            background:linear-gradient(-45deg, transparent 15px, thistle 0) right,
+                linear-gradient(45deg, transparent 15px, antiquewhite 0) left;
+            background-size:50% 100%;
+            background-repeat:no-repeat;
+        }
+        .div11 {
+            background:antiquewhite;
+            background:
+                linear-gradient(135deg, transparent 15px, thistle 0) top left,
+                linear-gradient(-135deg, transparent 15px, #655 0) top right,
+                linear-gradient(-45deg, transparent 15px, thistle 0) bottom right,
+                linear-gradient(45deg, transparent 15px, #655 0) bottom left;
+            background-size: 50% 50%;
+        background-repeat: no-repeat;
+        }
+        .div12 {
+            clip-path: polygon(20px 0, calc(100% - 20px) 0,
+            100% 20px, 100% calc(100% - 20px),
+            calc(100% - 20px) 100%, 20px 100%,
+            0 calc(100% - 20px), 0 20px);
+                }
+    </style>
+</head>
+<body>
+    <h3>radius</h3>
+    <div class="div1">div1<br>border-radius 10px</div>
+    <div class="div2">div2<br>border-radius 20%</div>
+    <div class="div3">div3<br>border-radius 30%</div>
+    <div class="div4">div4<br>border-radius 40%</div>
+    <div class="div5">div5<br>border-radius 50%</div>
+    <div class="div6">div6</div>
+    <div class="div7">div7</div>
+    <div class="div8">div8</div>
+    <div class="div9">div9</div>
+    <div class="div10">div10</div>
+    <div class="div11">div11</div>
+    <div class="div12">div12<br>with<br>clip-path</div>
+</body>
+</html>

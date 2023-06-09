@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            margin: 10px;
+            display: flex;
+            float: left;
+            background: url(img/new_05.jpg) center no-repeat;
+            box-shadow: 0px 0px 20px #333;
+        }
+        .box div {
+            width: 140px;
+            height: 60px;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2em;
+            background: #333;
+            opacity: 0.5;
+            transition: 500ms ease-in;
+        }
+        .box:hover div {
+            color: #fff;
+            opacity: 1;
+        }
+        .visiblityhidden {
+            visibility: hidden;
+        }
+        .displaynone {
+            display: none;
+        }
+        .visiblity {
+            visibility: visible;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div>TEXT 1</div>
+    </div>
+    <div class="box">
+        <div>TEXT 2</div>
+    </div>
+    <div class="box visiblityhidden">
+        <div>visiblityhidden</div>
+    </div>
+    <div class="box displaynone">
+        <div>displaynone</div>
+    </div>
+    <div class="box">
+        <div>TEXT</div>
+    </div>
+    <div class="box visibility">
+        <div>TEXT</div>
+    </div>
+</body>
+</html>

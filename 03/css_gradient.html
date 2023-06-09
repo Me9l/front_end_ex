@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+        }
+
+        /*
+        선형 그라디언트
+        default   : 180deg
+        to top    : 0deg, 360deg
+        to right  : 90deg
+        to left   : 270deg
+        to bottom : 180deg
+        */
+        .linearGradient {
+            background: linear-gradient(180deg,black 25%, red 50%, yellow 75%);
+        }
+
+        /*
+        원형 그라디언트
+
+        */
+        .radialGradient {
+            background: radial-gradient(black 20%,red 40%,yellow 50%,green 70%);
+        }
+    </style>
+</head>
+
+<body>
+    <h3>Gradient</h3>
+    <div class="linearGradient">
+    </div>
+    linear-gradient<br>
+    background: linear-gradient(180deg,black 25%, red 50%, yellow 75%);
+    <div class="radialGradient">
+    </div>
+    linear-gradient<br>
+    background: radial-gradient(black 20%,red 40%,yellow 50%,green 70%);
+</body>
+
+</html>

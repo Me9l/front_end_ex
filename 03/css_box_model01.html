@@ -51,14 +51,18 @@
             animation-name: slide;
         }
             @keyframes slide {
-            from {
-                margin-left: 100%;
+                from {
+                    margin-left: 80%;
+                }
+
+                to {
+                    margin-left: 0%;
+                }
             }
 
-            to {
-                margin-left: 0%;
-            }
-            }
+        h3[text] {
+            color: #a1a2a3;
+        }
     </style>
 </head>
 <body>
@@ -66,7 +70,7 @@
         block Tag : div, ul, ol, li, h1~h6, p, table ...
         inline Tag : span, a, img ...
      -->
-    <h3> BOX Model </h3>
+    <h3 text="a"> BOX Model </h3>
     <div> BOX 1 </div>
     <div> BOX 2 </div>
     <div> BOX 3 </div>
@@ -78,6 +82,6 @@
     <a href="https://www.naver.com/"> Naver </a>
     <a href="https://www.daum.net/"> Daum </a>
     <p class="anchor"> Button </a>
-    <div class="circle"></div>
+    <div class="circle">←</div>
 </body>
 </html>
