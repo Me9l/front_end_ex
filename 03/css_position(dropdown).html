@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> DropdownMenu </title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        } 
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        nav {
+            height: 50px;
+            position: fixed;
+            width: 100%;
+            /* border: 1px solid red; */
+        }
+        nav .header {
+            display: flex;
+            justify-content: space-evenly;
+        }
+        .header li, .dropdown > a {
+            width: 80px;
+            height: 50px;
+            background-color: rgba(18, 62, 143, 0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .dropdown li {
+            /* display: none; */
+            height: 0px;
+            overflow: hidden;
+            transition: 200ms;
+        }
+        .dropdown:hover li {
+            /* display: flex; */
+            height: 50px;
+            background-color: rgba(18, 62, 143, 0.5);
+        }
+
+        /* Scroll section */
+        #scroll {
+            height: 3000px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul class="header">
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">ABOUT</a></li>
+            <ui class="dropdown">
+                <a href="#">NEWS</a>
+                <li><a href="#">SubMenu</a></li>
+                <li><a href="#">SubMenu</a></li>
+                <li><a href="#">SubMenu</a></li>
+                <li><a href="#">SubMenu</a></li>
+            </ui>
+            <li><a href="#">STUDY</a></li>
+            <li><a href="#">CONTACT</a></li>
+        </ul>
+    </nav>
+    <div id="scroll">
+    </div>
+</body>
+
+</html>

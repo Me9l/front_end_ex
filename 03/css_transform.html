@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            margin: 30px;
+            border: 1px solid black;
+            background-color: aqua;
+            float: left;
+        }
+        hr {
+            clear: both;
+        }
+        .box1 {
+            transform: rotate(45deg);
+        }
+        .box2 {
+            rotate: 90deg;
+        }
+        .box3 {
+            transform: rotate3d(0,0,0,90deg);
+        }
+        .box4 {
+            transform: skew(30deg);
+        }
+        .box5 {
+            transform: skew(0,30deg);
+        }
+        .box6 {
+            transform: skew(30deg,30deg);
+        }
+        .box7 {
+            transition: 3s;
+        }
+        .box7:hover {
+            width: 200px;
+            background-color: yellow;
+            transform: rotate(-15deg);
+            transition-timing-function: ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <h3>Transform</h3>
+    <hr>
+    <h3>rotate</h3>
+    <div> BOX </div>
+    <div class="box1"> BOX 1 <br>transform: rotate(45deg);</div>
+    <div class="box2"> BOX 2 <br>rotate: 90deg;</div>
+    <div class="box3"> BOX 3 <br>transform: rotate3d(0,0,0,90deg);</div>
+    <hr>
+    <h3>skew</h3>
+    <div class="box4"> BOX 4 </div>
+    <div class="box5"> BOX 5 </div>
+    <div class="box6"> BOX 6 </div>
+    <hr>
+    <!-- 
+        transition-property : 변화효과 적용 속성 나열
+        transition-duration : 변화효과 지속시간 지정
+        transition-timing-function : 변화시작, 끝 타이밍 지정
+                                - linear : 일정한 속도
+                                - ease : 느린시작 > 빠른중간 > 느린끝
+                                - ease-in : 느린시작 > 빠른끝
+                                - ease-out : 빠른시작 > 느린끝
+                                - ease-in-out : 느린시작 > 정상속도 > 느린끝
+                                - step-end : 끝 효과만 표시
+                                - step-start : 시작효과만 표시
+                                - steps(n,end) : 전체 진행 효과를 n번으로 나누어 표시
+        transition-delay : 변화효과 지연시간 지정
+     -->
+
+     <div class="box7"> BOX 7 </div>
+</body>
+</html>
