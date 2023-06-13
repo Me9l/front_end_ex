@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        li {
+            list-style-type: none;
+        }
+
+        body {
+            margin: 0 auto;
+            max-width: 1200px;
+        }
+
+        header,
+        footer {
+            min-width: 980px;
+            height: 22vh;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header div {
+            width: 400px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        header div img[alt="logo"] {
+            width: 100px;
+            height: 50px;
+            margin: 10px 10px;
+        }
+
+        header div img[alt="moto"] {
+            width: 200px;
+            height: 30px;
+            margin: 30px;
+        }
+
+        header ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        main {
+            min-width: 980px;
+        }
+
+        main nav {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        section div {
+            width: 100%;
+        }
+
+        section div img {
+            width: 33.3%;
+            height: 120px;
+            min-width: 326px;
+        }
+        main article {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        article div {
+            display: flex;
+        }
+        article ul li span {
+            margin-left: 2em;
+            font-size: 0.7em;
+            color: #5c5c5c;
+        }
+        .mainsection {
+            display: flex;
+            justify-content: space-evenly;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div>
+            <a href="#"><img src="/img/logo.gif" alt="logo"></a>
+            <img src="/img/moto.gif" alt="moto">
+        </div>
+        <ul>
+            <li><a href="#">로그인</a>&emsp;|&emsp; </li>
+            <li><a href="#">회원가입</a>&emsp;|&emsp; </li>
+            <li><a href="#">사이트맵</a>&emsp;|&emsp; </li>
+            <li><a href="#">회사소개</a></li>
+        </ul>
+    </header>
+    <main>
+        <nav>
+            <a href="#"><img src="/img/menu01.gif" alt="손해보험 상식"></a>
+            <a href="#"><img src="/img/menu02.gif" alt="회사소개"></a>
+            <a href="#"><img src="/img/menu03.gif" alt="보험상품안내"></a>
+            <a href="#"><img src="/img/menu04.gif" alt="마이페이지"></a>
+            <a href="#"><img src="/img/menu05.gif" alt="고객센터"></a>
+        </nav>
+        <section>
+            <div>
+                <a href="#"><img src="/img/banner01.gif" alt="연금보험"></a><a href="#"><img src="/img/banner02.gif" alt="보험"></a><a href="#"><img src="/img/banner03.gif" alt="보험료계산"></a>
+            </div>
+        </section>
+        <article>
+            <div>
+                <img src="/img/customer.gif" alt="customer">
+                <a href="#"><img src="/img/more.gif" alt="more"></a>
+            </div>
+            <ul>
+                <img src="/img/notice.gif" alt="notice">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                <a href="#"><img src="/img/more.gif" alt="more"></a>
+                <li><a href="#">새로운 상품의 출시를 알려드립니다.</a><span>2014-03-03</span></li>
+                <li><a href="#">새로운 상품의 출시를 알려드립니다.</a><span>2014-03-03</span></li>
+                <li><a href="#">새로운 상품의 출시를 알려드립니다.</a><span>2014-03-03</span></li>
+                <li><a href="#">새로운 상품의 출시를 알려드립니다.</a><span>2014-03-03</span></li>
+            </ul>
+            <img src="/img/banner_faq.gif" alt="customer">
+        </article>
+        <br><hr><br>
+        <section class="mainsection">
+            <ul>
+                <a href="#"><img src="/img/menu01.gif" alt="손해보험 상식"></a>
+                <li><img src="/img/dot_blue.gif" alt="dot"><a href="#">손해보험이란?</a></li>
+                <li><img src="/img/dot_blue.gif" alt="dot"><a href="#">나에게 필요한 보험은?</a></li>
+                <li><img src="/img/dot_blue.gif" alt="dot"><a href="#">보험약관의 중요성</a></li>
+                <li><img src="/img/dot_blue.gif" alt="dot"><a href="#">손해보험의 특징</a></li>
+            </ul>
+            <ul>
+                <a href="#"><img src="/img/menu02.gif" alt="무바로 보험의 장점"></a>
+                <li><img src="/img/dot_blue.gif" alt="dot"><a href="#">보험료 처리</a></li>
+                <li><img src="/img/dot_blue.gif" alt="dot"><a href="#">신속한 처리 및 보장</a></li>
+                <li><img src="/img/dot_blue.gif" alt="dot"><a href="#">만기 시 원리금 보장</a></li>
+            </ul>
+            <ul>
+                <a href="#"><img src="/img/menu03.gif" alt="고객센터"></a>
+                <li><img src="/img/dot_blue.gif" alt="dot"><a href="#">전국 지점 안내</a></li>
+                <li><img src="/img/dot_blue.gif" alt="dot"><a href="#">손해배상 안내</a></li>
+                <li><img src="/img/dot_blue.gif" alt="dot"><a href="#">손해보험 FAQ</a></li>
+                <li><img src="/img/dot_blue.gif" alt="dot"><a href="#">질문과 답변</a></li>
+            </ul>
+            <ul>
+                <a href="#"><img src="/img/menu03.gif" alt="마이페이지"></a>
+                <li><img src="/img/dot_blue.gif" alt="dot"><a href="#">계약 조회/변경</a></li>
+                <li><img src="/img/dot_blue.gif" alt="dot"><a href="#">보험 계약 갱신</a></li>
+                <li><img src="/img/dot_blue.gif" alt="dot"><a href="#">보험료 납입</a></li>
+                <li><img src="/img/dot_blue.gif" alt="dot"><a href="#">증명서 발급</a></li>
+            </ul>
+            <ul>
+                <a href="#"><img src="/img/menu04.gif" alt="가입 안내"></a>
+                <li><img src="/img/dot_blue.gif" alt="dot"><a href="#">공인인증센터</a></li>
+                <li><img src="/img/dot_blue.gif" alt="dot"><a href="#">인증서 발행/갱신</a></li>
+                <li><img src="/img/dot_blue.gif" alt="dot"><a href="#">인증서 폐기</a></li>
+                <li><img src="/img/dot_blue.gif" alt="dot"><a href="#">웹 로그인</a></li>
+            </ul>
+            <ul>
+                <a href="#"><img src="/img/menu05.gif" alt="회사 소개"></a>
+                <li><img src="/img/dot_blue.gif" alt="dot"><a href="#">기업소개</a></li>
+                <li><img src="/img/dot_blue.gif" alt="dot"><a href="#">찾아오시는길</a></li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <article>
+            <img src="/img/address.gif" alt="address">
+        </article>
+        <article>
+            <img src="/img/customer_phone.gif" alt="customer"><br>
+            <a href="#"><img src="/img/b.gif" alt="blog"></a>
+            <a href="#"><img src="/img/f.gif" alt="facebook"></a>
+            <a href="#"><img src="/img/t.gif" alt="t"></a>
+        </article>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 150px;
+            height: 150px;
+            background-color: darkcyan;
+            position: relative;
+            animation: move ease 1000ms infinite alternate;
+        }
+        @keyframes move {
+            from {top: 0px;}
+            to {top: 30px;}
+        }
+    </style>
+</head>
+<body>
+    <div> Animation BOX </div>
+    <p>IE 9 이하에서 작동 하지 않음.</p>
+</body>
+</html>

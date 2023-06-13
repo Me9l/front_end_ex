@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0; padding: 0;
+        }
+        header {
+            width: 99%;
+            height: 20vh;
+            margin: 2px;
+            border: 1px solid black;
+        }
+        main {
+            width: 99%;
+            height: 100vh;
+            margin: 2px;
+            border: 1px solid blue;
+            display: flex;
+        }
+        aside {
+            width: 20%;
+            border: 1px solid red;
+        }
+        section {
+            width: 30%;
+            border: 1px solid green;
+        }
+        footer {
+            width: 99%;
+            height: 20vh;
+            margin: 2px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 
+        layout
+        - header : 최상단, 회사로고, 메뉴 << 모든 페이지에 적용>>
+            - JSP : 별도의 파일을 만들고 include 로 처리
+            - thymeleaf : layout으로 처리
+            - React : 컴포넌트로 처리
+        - main : body, 컨텐츠 내용
+        - footer : 최하단, 회사주소,전화번호,사업자등록번호<<모든 페이지에 적용>>
+        - aside : 좌,우의 추가 메뉴
+        - nav : 메뉴구성 (검색엔진에 쉽게 노출됨)
+        - section : 컨텐츠 구역
+        - article : 컨텐츠 안의 작은 컨텐츠 구역
+     -->
+    <header>
+        <h2>header</h2>
+        <nav>상단 메뉴</nav>
+    </header>
+
+    <main>
+        <aside>
+            <nav>좌측 메뉴</nav>
+        </aside>
+        <section>
+            <h2>컨텐츠 1</h2>
+            <article>article</article>
+            <article>article</article>
+            <article>article</article>
+        </section>
+        <section>
+            <h2>컨텐츠 1</h2>
+            <article>article</article>
+            <article>article</article>
+            <article>article</article>
+        </section>
+        <section>
+            <h2>컨텐츠 1</h2>
+            <article>article</article>
+            <article>article</article>
+            <article>article</article>
+        </section>
+    </main>
+
+    <footer>
+        <h2>footer</h2>
+    </footer>
+</body>
+
+</html>

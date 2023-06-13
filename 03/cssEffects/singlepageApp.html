@@ -14,17 +14,16 @@
         }
 
         :root {
-            --primary-color: #D96AA7;
-            --secondary-color: #422C73;
-            --complimentary-color: #88BFB5;
-            --contrast-color: #F2E527;
-            --light-color: #D2A9D9;
+            --primary-color: #A86;
+            --secondary-color: #ACF;
+            --complimentary-color: #8BF;
+            --contrast-color: #EB8;
+            --light-color: #CD7;
         }
 
         .container {
             background: #191919;
             min-height: 100vh;
-            font-family: Montserrat, sans-serif;
         }
 
         nav a {
@@ -34,11 +33,14 @@
             padding: 20px;
             text-align: center;
         }
+        nav a:hover {
+            text-shadow: 3px 3px 5px black;
+        }
 
         nav {
             position: fixed;
             left: 0;
-            z-index: 50;
+            z-index: 100;
             display: flex;
             justify-content: space-around;
             flex-direction: column;
@@ -106,10 +108,10 @@
 
 <body>
     <nav>
-        <a href="#first"><i class="far fa-user"></i></a>
-        <a href="#second"><i class="fas fa-briefcase"></i></a>
-        <a href="#third"><i class="far fa-file"></i></a>
-        <a href="#fourth"><i class="far fa-address-card"></i></a>
+        <a href="#first"><i class="far fa-user">A</i></a>
+        <a href="#second"><i class="fas fa-briefcase">B</i></a>
+        <a href="#third"><i class="far fa-file">C</i></a>
+        <a href="#fourth"><i class="far fa-address-card">D</i></a>
     </nav>
 
     <div class='container'>
