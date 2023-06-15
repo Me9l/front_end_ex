@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Global Settings */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: inherit;
+            font-size: 100%;
+        }
+        :root {
+            --font-color : #FFF;
+            --primary-background : #EEE ;
+            --secondary-background : #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+        li { list-style-type: none; }
+
+        span { color: #29d129; }
+        a { text-decoration: none; }
+
+        /* Header */
+        header{
+            padding: 1rem;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: var(--primary-background);
+        }
+        header ul {
+            display: flex;
+        }
+        /* footer */
+        .sitemap {
+            padding: 20px;
+            display: flex;
+            justify-content: space-evenly;
+        }
+        footer {
+            width: 100%;
+            float: left;
+        }
+        footer div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        footer img {
+            margin: 0 3%;
+        }
+
+        /* Color-Set */
+        
+        nav ul, .sitemap {
+            background-color: var(--secondary-background);
+            color: var(--font-color);
+        }
+        body {
+            background-color: var(--primary-background);
+        }
+
+        /* Aside */
+        aside h3 {
+            background-color: #29d129;
+            text-align: center;
+            color: #FFF;
+            padding: 0.6rem;
+        }
+        .categoryitem li {
+            padding: 0.3rem;
+        }
+        aside img {
+            width: 80%;
+            max-width: 200px;
+            margin: 6px 0 0 5%;
+        }
+
+        /* Main */
+        main h3 {
+            margin: 10px;
+        }
+        main img {
+            margin: 10px;
+        }
+
+        /* main Content */
+
+        .ordertable {
+            min-width: 752px;
+            width: 100%;
+            border-collapse: collapse;
+            text-align: center;
+        }
+        .ordertable tr {
+            height: 40px;
+        }
+        .ordertable th , td {
+            border-bottom: 1px solid black;
+        }
+
+        .content {
+            padding: 20px;
+        }
+        nav ul {
+            display: flex;
+            padding: 12px;
+            justify-content: space-evenly;
+        }
+
+        /*////////////// Media Query //////////////*/
+
+        /* over 768px */
+        @media only screen and (min-width : 768px) {
+            .z_mobile25 { width: 25%; float: left; padding: 10px; }
+            .z_mobile33 { width: 33.33%; float: left; padding: 10px; }
+            .z_mobile50 { width: 50%; float: left; padding: 10px; }
+            .z_mobile75 { width: 75%; float: left; padding: 10px; }
+            .z_mobile100 { width: 100%; float: left; padding: 10px; }
+        }
+        /* over 1024px */
+        @media only screen and (min-width:1024px) {
+            .z16 { width: 16.66%; float: left; padding: 10px; }
+            .z25 { width: 25%; float: left; padding: 10px; }
+            .z33 { width: 33.33%; float: left; padding: 10px; }
+            .z41 { width: 41.66%; float: left; padding: 10px; }
+            .z50 { width: 50%; float: left; padding: 10px; }
+            .z58 { width: 58.33%; float: left; padding: 10px; }
+            .z66 { width: 66.66%; float: left; padding: 10px; }
+            .z75 { width: 75%; float: left; padding: 10px; }
+            .z83 { width: 83.33%; float: left; padding: 10px; }
+            .z100 { width: 100%; float: left; padding: 10px; }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header class="z100">
+            <!-- <h2> TITLE </h2> -->
+            <a href="./index.html"><img src="../../img/footer_logo.gif" alt="logo"></a>
+            <div class="search">
+                <span>SEARCH</span>
+                <input type="text">
+                <a href="#"><span>icon</span></a>
+            </div>
+            <ul>
+                <li><a href="#"><span>로그인</span></a></li>&emsp;
+                <li><a href="#"><span>회원가입</span></a></li>&emsp;
+                <li><a href="#">마이페이지</a></li>&emsp;
+                <li><a href="#">이용안내</a></li>&emsp;
+                <li><a href="#">고객센터</a></li>
+            </ul>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="./details.html">상세페이지</a></li>
+                <li><a href="./order.html">장바구니</a></li>
+                <li><a href="#">고객 갤러리</a></li>
+                <li><a href="#">주문/배송</a></li>
+                <li><a href="#">자주 하는 질문</a></li>
+            </ul>
+        </nav>
+
+        <!-- aside -->
+        <aside class="z25 z_mobile25">
+            <h3>CATEGORY ITEM</h3>
+            <ul class="categoryitem">
+                <li><a href="#">생활 아트</a></li><hr>
+                <li><a href="#">캔버스 아트</a></li><hr>
+                <li><a href="#">사진 벽지</a></li><hr>
+                <li><a href="#">포인트 벽지</a></li><hr>
+                <li><a href="#">세계지도</a></li><hr>
+                <li><a href="#">엔티크 세계지도</a></li><hr>
+                <li><a href="#">입체 세계지도</a></li><hr>
+                <li><a href="#">어린이방 세계지도</a></li><hr>
+                <li><a href="#">롤스크린</a></li><hr>
+                <li><a href="#">맞춤제작</a></li><hr>
+                <li><a href="#">기타</a></li><hr>
+            </ul>
+            <img src="../../img/customer.png" alt="">
+        </aside>
+
+        <main class="z75 z_mobile75">
+            <h3><span>SHOPPING CART </span> 장바구니</h3>
+            <hr>
+            <div class="content">
+                <div>
+                    <img src="../../img/process.png" alt="process">
+                </div>
+                <table class="ordertable">
+                    <tr>
+                        <th>선택</th>
+                        <th colspan="2">상품명</th>
+                        <th>판매가</th>
+                        <th>수량</th>
+                        <th>적립금</th>
+                        <th>배송비</th>
+                        <th>합계</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="checkbox" name="select1" id="select1">
+                        </td>
+                        <td colspan="2">
+                            sjdy-005 펄실크 벽지/가로 125cm X 세로 90cm
+                        </td>
+                        <td>
+                            19,000원
+                        </td>
+                        <td>
+                            <input type="checkbox" name="modi" id="modi">
+                            <input type="button" value="수정">
+                        </td>
+                        <td>
+                            100원
+                        </td>
+                        <td>
+                            3,000원
+                        </td>
+                        <td>
+                            22,000원
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="checkbox" name="select1" id="select1">
+                        </td>
+                        <td colspan="2">
+                            sjdy-005 펄실크 벽지/가로 125cm X 세로 90cm
+                        </td>
+                        <td>
+                            19,000원
+                        </td>
+                        <td>
+                            <input type="checkbox" name="modi" id="modi">
+                            <input type="button" value="수정">
+                        </td>
+                        <td>
+                            100원
+                        </td>
+                        <td>
+                            3,000원
+                        </td>
+                        <td>
+                            22,000원
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"></td>
+                        <td colspan="4">
+                            [상품 구매 금액] : 19,000 + [배송비] : 3,000 = 
+                        </td>
+                        <td colspan="2"><b>[총 금액] : 22,000원</b></td>
+                    </tr>
+                    <tr>
+                        <td rowspan="3" colspan="4" >고객님의 총 주문 금액</td>
+                        <td colspan="2">[상품 구매 금액]</td>
+                        <td colspan="2">19,000원</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">배송비 :</td>
+                        <td colspan="2">3,000 원</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><b>총 주문 합계 금액 : </b></td>
+                        <td colspan="2"><b>22,000 원</b></td>
+                    </tr>
+                </table>
+                <div>
+                    <a href="#"><img src="../../img/order_button1.gif" alt="order"></a>
+                    <a href="#"><img src="../../img/order_button2.gif" alt="empty"></a>
+                    <a href="#"><img src="../../img/order_button3.gif" alt="keepShopping"></a>
+                    <a href="#"><img src="../../img/order_button4.gif" alt="deleteitem"></a>
+                    <a href="#"><img src="../../img/order_button5.gif" alt="buyall"></a>
+                    <a href="#"><img src="../../img/order_button6.gif" alt="recipt"></a>
+                </div>
+            </div>
+        </main>
+        
+        <!-- footer -->
+        <footer>
+                <ul class="sitemap">
+                    <li><a href="#">회사소개</a></li>
+                    <li><a href="#">이용안내</a></li>
+                    <li><a href="#">장바구니</a></li>
+                    <li><a href="#">주문조회</a></li>
+                    <li><a href="#">적립금</a></li>
+                    <li><a href="#">이용약관</a></li>
+                    <li><a href="#">개인정보보호정책</a></li>
+                    <li><a href="#">고객센터</a></li>
+                </ul>
+            <div class="footer">
+                <img src="../../img/footer_logo.gif" alt="logo">
+                <img src="../../img/address1.gif" alt="info">
+                <img src="../../img/footer_banner_01.gif" alt="footer_banner">
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
