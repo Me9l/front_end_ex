@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var city = ["seoul", "Incheon","Kimpo"];
+
+        printArr = () => {
+            for (let i = 0; i < city.length; i++) {
+                document.write("배열에 저장된 데이터 : " + city[i] + "<br/>");
+            }
+        }
+        printArr();
+        document.write("<hr/>");
+
+        var car=[];
+        car.push("hyundai");
+        car.push("kia");
+        car.push("benz");
+        car[3] = "AUDI";
+        car[5] = "BMW";
+        document.write(car + "<br/><hr/>");
+        document.write(car[4] + "<br/><hr/>");
+        </script>
+</head>
+<body>
+    <!-- 
+        자바 : 배열에 동일한 자료형만 저장 가능.
+        자바스크립트 : 다양한 자료형 저장 가능.
+    -->
+    <script>
+        for (let i = 0; i < city.length; i++) {
+            document.write("배열에 저장된 데이터 : " + city[i] + "<br/>");
+        }
+    </script>
+</body>
+</html>

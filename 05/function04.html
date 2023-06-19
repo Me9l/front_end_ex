@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function sum1() {
+            document.write("1st Args : " + arguments[0]+"<br/>");
+            document.write("2st Args : " + arguments[1]+"<br/>");
+            document.write("3st Args : " + arguments[2]+"<br/>");
+        }
+        sum1(2,3);
+        sum1(2,3,4);
+
+        function sum2() {
+            var sum = 0;
+
+            for (let i = 0; i < arguments.length; i++) {
+                sum += arguments[i];                
+            }
+            document.write("sum2() : " + sum + "<br/>");
+        }
+
+        sum2(5,6);
+        sum2(5,6,7);
+        sum2(5,6,7,8);
+
+        add=(...args)=> {
+            var total = 0;
+            for (let i = 0; i < args.length; i++) {
+                total += args[i];
+            }
+            return total;
+        }
+        console.log(add(4));
+        console.log(add(4,5));
+        console.log(add(4,5,6));
+    </script>
+</head>
+<body>
+    <!-- 
+        함수에 매개변수가 많이 들어오는 경우
+     -->
+</body>
+</html>

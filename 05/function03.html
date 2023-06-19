@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        add1 = () => {
+        var sum = 0;
+        return sum ;
+        }
+        add1 = (x) => {
+        var sum = x ;
+        return sum ;
+        }
+        add1 = (x,y) => {
+        var sum = x+y ;
+        return sum ;
+        }
+        add1 = (x,y,z) => {
+        var sum = x+y+z ;
+        return sum ;
+        }
+
+        var r0 = add1();
+        var r1 = add1(3);
+        var r2 = add1(3,4);
+        var r3 = add1(3,4,5);
+        var r4 = add1(3,4,5,6);
+
+        console.log(r0); // NaN
+        console.log(r1); // NaN
+        console.log(r2); // NaN
+        console.log(r3); // 12
+        console.log(r4); // 12
+
+        add2 = (x,y,z) => {
+            if (( y === undefined ) && ( z === undefined )) {
+                sum = x;
+                return sum;
+            } else if ( z === undefined ) {
+                sum = x+y;
+                return sum;
+            } else {
+                sum = x+y+z;
+                return sum;
+            }
+        }
+        
+        var r6 = add2(3);
+        var r7 = add2(3,4);
+        var r8 = add2(3,4,5);
+        var r9 = add2(3,4,5,6);
+
+        console.log(r6); // 3
+        console.log(r7); // 7
+        console.log(r8); // 12
+        console.log(r9); // 12
+
+    </script>
+</head>
+<body>
+    <!-- 
+        함수에 매개변수가 적게 들어오는 경우
+        undefined
+        조건문을 통해 처리
+     -->
+</body>
+</html>

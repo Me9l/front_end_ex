@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .row {
+            /* border: 1px solid #000; */
+            width: 650px;
+            margin: 0 auto;
+        }
+        .row ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        .row ul li {
+            /* border: 1px solid #000; */
+            display: inline-table;
+        }
+        #lightbox {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            top: 0;
+            left: 0;
+            display: none;
+            /* border: 1px solid #000; */
+        }
+        #lightbox img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            border: 3px solid whitesmoke;
+            transform: translate(-50%,-50%);
+        }
+    </style>
+</head>
+<body>
+    <div class="row">
+        <ul>
+            <li><img src="../03/img/new_01.jpg" data-src="../03/img/new_01.jpg" class="pic"></li>
+            <li><img src="../03/img/new_02.jpg" data-src="../03/img/new_02.jpg" class="pic"></li>
+            <li><img src="../03/img/new_03.jpg" data-src="../03/img/new_03.jpg" class="pic"></li>
+            <li><img src="../03/img/new_04.jpg" data-src="../03/img/new_04.jpg" class="pic"></li>
+            <li><img src="../03/img/new_05.jpg" data-src="../03/img/new_05.jpg" class="pic"></li>
+            <li><img src="../03/img/new_06.jpg" data-src="../03/img/new_06.jpg" class="pic"></li>
+        </ul>
+    </div>
+
+    <div id="lightbox">
+        <img src="../03/img/new_01.jpg" id="lightboxImg">
+    </div>
+
+    <script>
+        // 변수 할당
+        var pics = document.getElementsByClassName("pic");
+        var lightbox = document.getElementById("lightbox");
+        var lightboximg = document.getElementById("lightboxImg");
+
+        // 작은 이미지 클릭시 함수 호출
+        for ( var i = 0 ; i < pics.length ; i++ ) {
+            pics[i].addEventListener("click",showLightbox);
+        }
+
+        // 작은 이미지 클릭시 원본 이미지 출력 함수
+        function showLightbox() {
+            var bigLocation = this.getAttribute("data-src");    //getAttribute 를 통해 data-src의 경로를 변수에 저장.
+            lightboximg.setAttribute("src",bigLocation);
+            lightbox.style.display="block";
+        }
+        // 원본 이미지 클릭시 닫는 함수
+        lightbox.onclick = function() {
+            lightbox.style.display="none";
+        }
+    </script>
+</body>
+</html>

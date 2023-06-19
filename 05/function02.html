@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var result ;
+        function add ( name , n ) {
+            document.write("이름 : ", name , " 입력 : " , n ,"<br/>");
+            var sum = 0 ;
+            for (let i = 0; i <= n ; i++) {
+                sum+=i;
+            }
+            return sum;
+        }
+        result = add ("User",10);
+        var calc = add;
+
+        arrow = () => document.write("arrowfunction");
+        arrow();
+
+    </script>
+</head>
+<body>
+    <!--
+        무명함수 : 객체형식의 함수
+
+        let 변수명 = function (params) {
+            code;
+        }
+        선언 전에 호출하면 오류 발생.
+
+        arrow function
+
+        let arrow = () => code ;
+////////////////////////////////////////////////
+
+// Traditional anonymous function
+(function (a) {
+  return a + 100;
+});
+
+// 1. Remove the word "function" and place arrow between the argument and opening body bracket
+(a) => {
+  return a + 100;
+};
+
+// 2. Remove the body braces and word "return" — the return is implied.
+(a) => a + 100;
+
+// 3. Remove the parameter parentheses
+a => a + 100;
+
+////////////////////////////////////////////////
+// Traditional anonymous function
+(function (a, b) {
+  return a + b + 100;
+});
+
+// Arrow function
+(a, b) => a + b + 100;
+
+const a = 4;
+const b = 2;
+
+// Traditional anonymous function (no parameters)
+(function () {
+  return a + b + 100;
+});
+
+// Arrow function (no parameters)
+() => a + b + 100;
+
+////////////////////////////////////////////////
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions
+
+     -->
+</body>
+</html>

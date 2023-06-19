@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var text1 = "Before function";
+        var text2 = "After function";
+
+        printMsg(text1);
+        function printMsg(params) {
+            document.write("<p id='chg'>printMsg() : " + params + "</p><br/>");
+        }
+        printMsg(text2);
+        
+        function changeText() {
+            changeColor();
+            let a = document.getElementById("anchor");
+            if (a.innerText == "has changed") {
+                a.innerText = "anchor tag";
+            } else {
+                a.innerText = "has changed";
+           }
+        }
+        function changeColor() {
+            let a = document.getElementById("chg");
+            a.style.backgroundColor = "black";
+            a.style.color = "white";
+        }
+    </script>
+</head>
+<body>
+    <button type="button" onclick="printMsg('파라미터')">button</button>
+    <a id="anchor" href="#" onmouseover="changeText()"> anchor tag </a>
+</body>
+</html>

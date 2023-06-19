@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .imgBox {
+            width: 80%;
+            margin: 0 auto;
+            border: 1px solid black;
+        }
+        .imgBox ul {
+            display: flex;
+        }
+        .imgBox ul li {
+            list-style-type: none;
+        }
+        .imgBox ul li img {
+            width: 90%;
+        }
+
+        #lightbox {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.8);
+            display: none;
+        }
+        #lightbox img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            border: 3px solid #aaa;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="imgBox">
+        <ul>
+            <li> <img src="https://www.adobe.com/content/dam/cc/us/en/creative-cloud/photography/discover/landscape-photography/CODERED_B1_landscape_P3a_438x447.jpg.img.jpg" data-src="https://www.adobe.com/content/dam/cc/us/en/creative-cloud/photography/discover/landscape-photography/CODERED_B1_landscape_P2a_690x455.jpg.img.jpg" alt="img" class="imgs"></li>
+            <li> <img src="https://www.adobe.com/content/dam/cc/us/en/creative-cloud/photography/discover/landscape-photography/CODERED_B1_landscape_P3b_438x447.jpg.img.jpg" data-src="https://www.adobe.com/content/dam/cc/us/en/creative-cloud/photography/discover/landscape-photography/CODERED_B1_landscape_P2c_714x348.jpg.img.jpg" alt="img" class="imgs"></li>
+            <li> <img src="https://www.adobe.com/content/dam/cc/us/en/creative-cloud/photography/discover/landscape-photography/CODERED_B1_landscape_P3c_438x447.jpg.img.jpg" data-src="https://www.adobe.com/content/dam/cc/us/en/creative-cloud/photography/discover/landscape-photography/CODERED_B1_landscape_P2a_690x455.jpg.img.jpg" alt="img" class="imgs"></li>
+        </ul>
+    </div>
+
+    <div id="lightbox">
+        <img src="https://www.adobe.com/content/dam/cc/us/en/creative-cloud/photography/discover/landscape-photography/CODERED_B1_landscape_P3a_438x447.jpg.img.jpg" alt="popup" id="lightboxImg">
+    </div>
+    <script>
+        var pics = document.getElementsByClassName("imgs");
+        var lightbox = document.getElementById("lightbox");
+        var lightboxImg = document.getElementById("lightboxImg");
+
+        for ( var i = 0 ; i < pics.length ; i++ ) {
+            pics[i].addEventListener("click",showLightbox);
+        }
+
+        function showLightbox() {
+            var popup = this.getAttribute("data-src");
+            lightboxImg.setAttribute("src",popup);
+            lightbox.style.display="block";
+        }
+        lightbox.onclick = function() {
+            lightbox.style.display = "none";
+        }
+    </script>
+</body>
+</html>
