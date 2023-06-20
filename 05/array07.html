@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var data = ["data1","data2","data3","data4","data5"];
+        console.log(data);  // 배열 객체 반환.
+        var p1 = data.push("data6","data7");
+        // var p1 = data.push("data5","data7"); // 데이터 중복 가능.
+        console.log(data);  // 배열 객체 반환.
+        console.log(p1);    // 배열 길이 반환.
+        
+        var p2 = data.pop();
+        console.log(p2);  // pop한 값 반환.
+        console.log(data);  // 배열 객체 반환.
+    </script>
+</head>
+<body>
+    <!-- 
+        stack ( last in first out , LIFO )
+        push : 배열 마지막에 값 추가.
+        pop : 배열 마지막 값을 꺼냄.
+
+        queue ( first in first out , FIFO )
+     -->
+</body>
+</html>

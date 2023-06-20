@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> join, concat, reverse, sort </title>
+    <script>
+        //////////////////////////////////// join();
+        var city = ["강북","강남","성동","중구"];
+        var joindata1 = city.join();
+        var joindata2 = city.join('-');
+        var joindata3 = city.join("&");
+        
+        document.write(joindata1 + "<br/>");
+        document.write(joindata2 + "<br/>");
+        document.write(joindata3 + "<br/>");
+        
+        //////////////////////////////////// concat();
+        var add = ["삼성","엘지","롯데","기아"];
+        document.write(add + "<br/>");
+
+        var data1 = city.concat("중랑","신당");
+        var data2 = city.concat(add);
+        var data3 = city.concat(city, data1);
+
+        document.write("data1 : " + data1 + "<br/>");
+        document.write("data2 : " + data2 + "<br/>");
+        document.write("data3 : " + data3 + "<br/>");
+    </script>
+
+    <script>
+        //////////////////////////////////// reverse();
+        var data = [ 9,8,7,6,5,4,3,2,1 ];
+        document.write("data (원형) : " , data , "<br/>");
+        
+        var rdata = data.reverse();
+        document.write("data.reverse() : " , rdata , "<br/>");
+
+        //////////////////////////////////// sort();
+        var intdata1 = [11,19,38,67,26,55,24,53,12,31];
+        var intdata2 = [123,2,41,132,1234,6,29,432];
+        var engdata = ["Apple","HTML","Google","computer","java","angel"];
+        var kordata = ["서울","대전","대구","부산","인천","광주","남원"];
+
+        document.write("2자리 수치.sort() : " + intdata1.sort(), "<br/>");
+        document.write("3자리 수치.sort() : " + intdata2.sort(), "<br/>"); // 문자열 형태로 비교된다.
+        document.write("3자리 수치.sort() : " + intdata2.sort(function(a,b){return a-b}), "<br/>"); // 오름차순 정렬.
+        document.write("3자리 수치.sort() : " + intdata2.sort(function(a,b){return b-a}), "<br/>"); // 내림차순 정렬.
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

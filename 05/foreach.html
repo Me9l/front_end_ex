@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var arr = ["index0","index1","index2","index3"];
+        print = (item,index) => {
+            document.write("arr ["+ index + "] 번 데이터 : " + item + "<br/>");
+        }
+        arr.forEach(print);
+
+        arr.forEach((a,b)=>{
+            document.write(a +" = " + b + "<br/>");
+        });
+
+
+        var data = [1,2,3,4,5,6,7,8,9,10];
+        var sum = 0;
+        data.forEach((value)=>{
+            sum += value;
+        });
+        document.write(sum);
+
+        // var data = {"name":"apple","age":"30"};
+        // console.log(data);
+        // console.log(data.name);
+    </script>
+</head>
+<body>
+    <!-- 
+        forEach : 배열의 index 0 ~ 마지막 까지 순환하면서 출력
+     -->
+</body>
+</html>

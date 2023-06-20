@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> slice, splice </title>
+    <script>
+        var arr1 = ["강북구","강남구","강서구","강동구","중구","동대문구","종로구"];
+        
+        // slice
+        // slice(~부터,(n개 or)~이전까지);
+        var strslice1 = arr1.slice(0, 4);
+        var strslice2 = arr1.slice(2,-1);
+        var strslice3 = arr1.slice(-4, -2);
+        
+        console.log(strslice1 + "<br/>");
+        console.log(strslice2 + "<br/>");
+        console.log(strslice3 + "<br/>");
+        
+        // splice
+        // splice(~부터,n개);
+        var arr2 = ["강북구","강남구","강서구","강동구","중구","동대문구","종로구"];
+        document.write( "arr2 : "+ arr2 + "<br/>" );
+        var strsplice1 = arr2.splice(2,2);
+        document.write( "strsplice1 : "+ strsplice1 + "<br/>" );
+        var strsplice2 = arr2.splice(0,1);
+        document.write( "strsplice2 : "+ strsplice2 + "<br/>" );
+        document.write( "arr2 : "+ arr2 + "<br/>" );
+
+        // 특정 자리 수에서 마지막 까지.
+
+        var strsplice3 = arr2.splice(2, Number.MAX_VALUE);
+        document.write("arr2.splice(2, Number.MAX_VALUE) : " + strsplice3 + "<br/>");
+        document.write("arr2 : " + arr2 + "<br/>");
+
+    </script>
+</head>
+<body>
+    <!-- 
+        slice method : 특정 범위의 값을 잘라서 새로운 배열에 저장. (기존 배열에 영향을 미치지 않는다.)
+        index 0 , 1 , 2 ... : 배열 시작부터.
+        index -1, -2, -3 ... : 배열 마지막부터.
+
+        splice method : 원본의 값 삭제 후 추가
+     -->
+</body>
+</html>

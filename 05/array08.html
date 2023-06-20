@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        let data = ["data1","data2","data3","data4","data5"];
+        document.write("원본 data : ",data + "<br/>");
+        let p1 = data.unshift("data6","data7");
+        document.write(p1 + "<br/>");
+        document.write("원본 data : ",data + "<br/>");
+        
+        let p2 = data.shift();
+        document.write(p2 + "<br/>");
+        document.write("원본 data : ",data + "<br/>");
+    </script>
+</head>
+<body>
+    <!-- 
+        shift   : 배열 첫번째 자리 데이터를 삭제 후 삭제한 값 리턴.
+        unshift : 배열 첫번째 자리에 데이터를 넣고 배열 길이 리턴.
+     -->
+</body>
+</html>

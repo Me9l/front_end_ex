@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        var arrdata=[];
+        function insert() {
+            for (let i = 0; i < 100; i++) {
+                arrdata[i] = i+1;
+                document.write(arrdata[i]+" ");
+            }
+        }
+        function del() {
+            for (let i = 0; i < arrdata.length; i++) {
+                if( i % 2 == 0 ) {
+                    arrdata[i] = 0;
+                }
+            }
+            select();
+        }
+        function select() {
+            for (let i = 0; i < arrdata.length; i++) {
+                document.write(arrdata[i] + " ");
+            }
+            document.write("<p>홀수 데이터 초기화 됨.</p>");
+            document.write("<a href='./ex01.html'>return</a>");
+        }
+        insert();
+    </script>
+        <br>
+        <button type="button" onclick="del()">배열 홀수 데이터 초기화</button>
+</head>
+<body>
+</body>
+</html>

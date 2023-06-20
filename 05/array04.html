@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var arrdata = [];
+        function add() {
+            for ( let i = 0; i < 100; i++ ) {
+                arrdata[i] = i+1;
+                console.log(arrdata[i]);
+            }
+            select();
+        }
+
+        function select() {
+            var sum = 0 ;
+            for (let i = 0; i < arrdata.length; i++) {
+                sum += arrdata[i];
+            }
+            console.log(sum);
+        }
+        add();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

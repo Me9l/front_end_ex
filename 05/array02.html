@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let x = 5 ;
+        let arr = ["String",10,true,x];
+
+        function sumArr() {
+            var sum= [];
+            for (let i = 0; i < arr.length; i++) {
+                console.log(arr[i]);
+                sum += arr[i];
+            }
+            console.log(sum);
+        }
+        sumArr();
+
+        var arr1 = ["서울","인천","부산"];
+        var city = new Array("seoul","incheon","pusan");
+
+        for (let i = 0; i < city.length; i++) {
+            document.write(" city 배열 데이터 : " + city[i] + "<br/>");
+        }
+        document.write( "city : " + city + "<br/>" );
+        document.write( "typeof city : " + typeof city + "<br/>" );
+        document.write( "Array.isArray(city) : " + Array.isArray(city) + "<br/>" );
+        document.write( "city instanceof Array : " + (city instanceof Array) + "<br/>" );
+        // console.log(city instanceof Array);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
