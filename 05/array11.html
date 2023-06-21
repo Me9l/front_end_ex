@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map 객체</title>
+    <script>
+        // Map
+        var data = new Map();
+        data.set("key","val");
+        data.set("user","password");
+        console.log(data);
+        console.log(data.get('key'));
+        console.log(data.keys());
+        console.log(data.values());
+
+        //
+        var arr = {'a':100, 'b':200};
+        arr['c'] = 300;
+        arr.d = 400;
+        console.log(arr);
+        console.log(arr.b);
+        console.log(arr['a']);
+        console.log(arr['c']);
+        console.log(arr['d']);
+    </script>
+</head>
+<body>
+    <!-- 
+        Map 객체
+        키-값 쌍과 키의 원래 삽입 순서를 기억.
+        모든 값(객체 및 원시 값 모두)은 키 또는 값으로 사용될 수 있다.
+
+        연관배열 ( Map 형식 배열 )
+        var arr = {key:value, key:value, key:value};
+     -->
+</body>
+</html>

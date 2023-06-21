@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 2D array </title>
+    <script>
+        var arr = [[1,2,3,4,5],[10,20,30,40,50]];
+        console.log(arr);
+        arr[0][2] = 6;
+        console.log(arr[0][2]);
+        console.log(arr.length);
+        console.log(arr[0]);
+        console.log(arr[0].length);
+
+        
+        arr.forEach(element => {
+            console.log(element);
+        });
+
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = 0; j < arr[i].length; j++) {
+                console.log(arr[i][j]);
+            }
+        }
+    </script>
+</head>
+<body>
+    <!-- 
+        2차원 배열
+     -->
+</body>
+</html>

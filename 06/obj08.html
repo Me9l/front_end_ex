@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    </style>
+    <script>
+        function changetext() {
+            let text = document.getElementById("msg");
+            text.style.color = "red";
+        }
+
+        function showtext() {
+            // document.getElementById("msg").style.visibility = "visible";
+            // document.getElementById("msg").style.display = "block";
+            document.getElementById("msg").style.opacity = 1;
+        }
+        
+        function hidetext() {
+            // document.getElementById("msg").style.visibility = "hidden";
+            // document.getElementById("msg").style.display = "none";
+            document.getElementById("msg").style.opacity = 0;
+        }
+    </script>
+</head>
+<body>
+    <p id="msg"> 문서 객체 스타일 변경 </p>
+    <button type="button" onclick="changetext()">change Text Style</button><br>
+    <button type="button" onclick="showtext()">show Text</button><br>
+    <button type="button" onclick="hidetext()">hide Text</button>
+    
+    <script>
+        var msg = document.getElementById("msg");
+        msg.style.transition = "1s linear";
+        
+        var btn = document.querySelectorAll("button");
+        console.log(btn.length);
+
+        for (let i = 0; i < btn.length; i++) {
+            btn[i].style.width = '200px';   
+            btn[i].style.height = '36px';
+            btn[i].style.backgroundColor = 'rgba(0,0,0,0.5)';
+        }
+
+    </script>
+</body>
+</html>

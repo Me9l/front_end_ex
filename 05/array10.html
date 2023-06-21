@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var data = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
+
+        document.write("data : " + data + "<br/>");
+        document.write("data.indexOf(30) : " + data.indexOf(30) + "<br/>"); // 배열 순차 검색.
+        document.write("data.lastIndexOf(10) : " + data.lastIndexOf(10) + "<br/>"); // 배열 끝부터 검색.
+        document.write("data.indexOf(30) : " + data.indexOf(30,2) + "<br/>");     // index 3 이후부터 30을 검색.
+        document.write("data.indexOf(300) : " + data.indexOf(300) + "<br/>");
+    </script>
+</head>
+<body>
+    <!-- 
+        indexOf     : 배열 시작부터 탐색. 인덱스 리턴.
+        lastIndexOf : 배열 마지막부터 탐색. 인덱스 리턴.
+     -->
+</body>
+</html>

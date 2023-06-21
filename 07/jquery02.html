@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> jQuery vs JavaScript </title>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+
+    <script>
+        function del() {
+            let msg = document.getElementById('msg');
+            msg.innerText = '';
+        }
+    </script>
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                $(".m").hide();
+            });
+        });
+    </script>
+</head>
+<body>
+    <p id="msg"> Message : JavaScript </p>
+    <button onclick="del()"> Delete Message </button>
+    <hr>
+    <p class="m"> Message : JavaScript </p>
+    <button> Delete Message </button>
+</body>
+</html>

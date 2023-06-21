@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p id="car"></p>
+
+    <p> [ car 1 ] </p>
+    <p id="car1"> </p>
+
+    <p> [ car 2 ] </p>
+    <p id="car2"> </p>
+
+    <p> [ car 3 ] </p>
+    <p id="car3"> </p>
+
+    <script>
+        var car = new Array(
+            ['benz','white',12000],
+            ['bmw','black',10000],
+            ['audi','silver',11000],
+        );
+        
+        document.getElementById('car').innerHTML = "조회한 차량 수 : " + car.length;
+
+        for (let i = 0; i < car.length; i++) {
+            document.getElementById('car'+(i+1)).innerHTML = car[i];
+        }
+    </script>
+</body>
+</html>

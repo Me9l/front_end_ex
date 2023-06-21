@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    목차 [ <span onclick="toggle()"> 가리기 </span> ]
+    <ol id="drop">
+        <li> HTML </li>
+        <li> CSS </li>
+        <li> JavaScript </li>
+    </ol>
+
+    <!-- <script>
+        // ol tag 내용을 기본 출력시 처리되지 않도록 하고, 보이기 클릭시 출력
+        let a = document.querySelector('span');
+        console.log(a);
+        let drop = document.getElementById('drop');
+        console.log(drop);
+        drop.style.display = "none";
+        // 보이기/숨기기 토글
+        a.onclick = () => {
+            if( drop.style.display != "block" ) {
+                drop.style.display = "block";
+                a.innerText ="숨기기";
+            } else {
+                drop.style.display = "none";
+                a.innerText ="보이기";
+            }
+        };
+    </script> -->
+    <script>
+        function toggle() {
+            if(document.getElementById('drop').style.display == "none") {
+                document.getElementById('drop').style.display = "block";
+                document.querySelector('span').innerText = '가리기';
+            }else {
+                document.getElementById('drop').style.display = "none";
+                document.querySelector('span').innerText = '보이기';
+            }
+        }
+    </script>
+</body>
+</html>

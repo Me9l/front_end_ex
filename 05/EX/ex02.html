@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mouse over</title>
+</head>
+<body>
+    <img src="./img/easys-1.jpg" alt="img" id="cover">
+    <script>
+        var img = document.getElementById("cover");
+        img.onmouseover = () => {
+            img.setAttribute('src','./img/easys-2.jpg');
+            console.log(img.src);
+        };
+        img.onmouseout = () => {
+            img.setAttribute('src','./img/easys-1.jpg');
+            console.log(img.src);
+        }
+    </script>
+    <!-- <script>
+        img.addEventListener('mouseover',change1);
+        img.addEventListener('mouseout',change2);
+
+        function change1() {
+            img.src = './img/easys-2.jpg';
+        }
+        function change2() {
+            img.src = './img/easys-1.jpg';
+        }
+    </script> -->
+</body>
+</html>

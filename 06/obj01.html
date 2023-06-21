@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 
+        document.write : body 내의 모든 태그 삭제 후 출력.
+        innerHTML : 특정 element 내부에 값 입력.
+        innerText : 특정 element에 문자 입력.
+        textContent : 특정 element 에 문자 입력.
+     -->
+    <p id="p1"></p>
+    <p id="p2"></p>
+    <p id="p3"></p>
+    <hr>
+
+    <script>
+        var car = { indstr: 'hyundai', name: 'GV80', price: 8000 };
+        var a = document.getElementById("p1");
+        a.innerHTML = car.indstr + " " + car.name + " " + car.price;
+        document.getElementById("p2").innerHTML = car['name'];
+        document.getElementById("p3").innerText = car['price'];
+    </script>
+    
+    <p id="msg1"></p>
+    <p id="msg2"></p>
+    <p id="msg3"></p>
+    <hr>
+    <p id="msg4"></p>
+    <p id="msg5"></p>
+
+    <script>
+        var obj = {
+            m1 : function() {
+                return "Hello World!";
+            },
+            m2 : function(a) {
+                var result = a;
+                return result;
+            },
+            m3 : function(a,b) {
+                var result = a+b;
+                return result;
+            }
+        }
+
+        document.getElementById("msg1").innerHTML = obj.m1();
+        document.getElementById("msg2").innerHTML = obj.m2("<a href='#'>link</a>");
+        document.getElementById("msg3").innerHTML = obj.m3(obj.m1(),obj.m3(" this is "," KU "));
+        document.getElementById("msg4").textContent = obj.m2("<a href='#'>link</a>");
+        document.getElementById("msg5").innerText = obj.m2("<a href='#'>link</a>");
+
+        </script>
+
+</body>
+
+</html>

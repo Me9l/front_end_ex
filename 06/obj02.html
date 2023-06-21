@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="up"></p>
+    <p id="down"></p>
+    <p id="indown"></p>
+    
+    <script>
+        var car = {
+            name : "MAYBACH",
+            speed : 60,
+            color : "Black",
+            up : function() {
+                return this.speed + 10 ;
+            },
+            down : function() {
+                return this.speed - 10 ;
+            },
+            inDown : (speed) => {
+                return speed - 10 ;
+            }
+        };
+
+        document.getElementById("up").innerHTML = car.up();
+        document.getElementById("down").innerHTML = car.down();
+        document.getElementById("indown").innerHTML = car.inDown(100);
+    </script>
+
+    <p id="name"></p>
+    <p id="price"></p>
+    <p id="make"></p>
+    <script>
+        var drink = new Object();
+
+        drink.name = "Americano";
+        drink.price = 3000;
+        drink.temp = "ICE";
+        drink.make = function() {
+            return drink.temp + " " + drink.name + " 를 만듭니다.";
+        }
+
+        document.getElementById("name").innerHTML = "선택 한 음료 : " + drink.temp + " " + drink.name;
+        document.getElementById("price").innerHTML = "음료 가격 : " +  drink.price.toLocaleString('ko-KR') + " 원.";
+        document.getElementById("make").innerHTML = drink.make();
+
+    </script>
+
+    <!-- <script>
+        정규식을 이용해 3자리마다 콤마를 넣을 수 있다.
+
+        let price = 1000000;
+        let result = price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+        console.log(result);
+
+        price = 1000000.123;
+        result = price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+        console.log(result);
+
+    </script> -->
+</body>
+</html>

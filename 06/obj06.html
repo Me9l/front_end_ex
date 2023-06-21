@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CreateElement</title>
+
+    <script>
+        function add() {
+            // create Tag (element)
+            var content = document.createElement("div");
+            var textNode = document.createTextNode("create textNode");
+            content.appendChild(textNode); // content 에 해당하는 tag안에 textNode를 적용.
+
+            var inp = document.getElementById("inp");
+            //<div id="inp"></div> 내에 출력
+            inp.appendChild(content);
+        }
+    </script>
+    <!-- <script>
+    function add() {
+        var content = document.createElement("div");
+        var textNode = document.createTextNode("create textNode");
+        content.appendChild(textNode); // content 에 해당하는 tag안에 textNode를 적용.
+
+        //body내에 출력
+        document.body.appendChild(content);
+    }
+</script> -->
+
+</head>
+
+<body>
+    <a href="#" onclick="add()"> create contents </a>
+    <div id="inp"></div>
+</body>
+
+</html>

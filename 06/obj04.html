@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 
+        배열 내부 객체
+     -->
+
+    <p> - MENU - </p>
+    <p id="menu10"></p>
+    <p id="menu20"></p>
+
+    <p> - MENU - </p>
+    <p id="menu11"></p>
+    <p id="menu21"></p>
+
+    <p> - MENU - </p>
+    <p id="menu12"></p>
+    <p id="menu22"></p>
+
+    <script>
+        var drink = [
+            { menu: "Americano", temp: "ICE", price: 4000 },
+            { menu: "Cafe Latte", temp: "HOT", price: 4500 },
+            { menu: "Vanilla Latte", temp: "HOT", price: 5000 }
+        ];
+        console.log(drink[0].menu);
+        console.log(drink[1].menu);
+        console.log(drink[2].menu);
+
+        for (let i = 0; i < drink.length; i++) {
+            document.getElementById("menu1"+i).innerHTML = "Menu : " + drink[i].temp + " " + drink[i].menu;
+            document.getElementById("menu2"+i).innerHTML = "price : " + drink[i].price;
+        }
+
+    </script>
+</body>
+
+</html>

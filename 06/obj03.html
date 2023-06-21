@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 생성자를 사용해 필드의 값을 받아 -->
+    <p id="a"></p>
+    <script>
+        function drink (menu, temp, price) {
+            this.menu = menu;
+            this.temp = temp;
+            this.price = price;
+            
+            this.dc20 = function() {
+                return this.price - this.price*0.2;
+            }
+            this.dc50 = function() {
+                return (this.price) - (this.price*0.5);
+            }
+        }
+        
+        var order1 = new drink("Americano","HOT",4000);
+        var order2 = new drink("Latte","ICE",4500);
+        
+        document.write(order1.menu + order1.temp + order1.price);
+        document.getElementById('a').textContent = order1.dc20();
+        
+        </script>
+
+</body>
+</html>
