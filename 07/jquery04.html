@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $("button.add").click(function(){
+                $(".container h1,.container h2,.container p,.container div").addClass("blue");
+                $(".container h1,.container h2,").addClass("bold");
+            });
+            $("button.remove").click(function(){
+                $(".container h1,.container h2,.container p,.container div").removeClass("blue");
+                $(".container h1,.container h2,").removeClass("bold");
+            });
+
+            $("button.toggle").click(function(){
+                $("div.div2").toggleClass("blue bold");
+            });
+        });
+    </script>
+    <style>
+        .bold {
+            font-weight: bolder;
+        }
+        .blue {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1> HTML </h1>
+        <h2> CSS </h2>
+        <p> JavaScript </p>
+        <div> jQuery </div>
+        <button class="add"> Add CSS </button>
+        <button class="remove"> Remove CSS </button>
+    </div>
+    <div class="div2">
+        <h1> HTML </h1>
+        <h2> CSS </h2>
+        <p> JavaScript </p>
+        <div> jQuery </div>
+        <button class="toggle"> toggle CSS </button>
+    </div>
+
+    <!-- 
+        CSS in jQuery
+        - addClass()    : element(요소)에 class 추가.
+        - removeClass() : element(요소)에 class 제거.
+
+        - toggleClass() : 요소에 class를 추가/제거 반복.
+        - css()         : 선택한 요소의 스타일 속성을 설정|반환.
+        - width()       : 폭 반환. ( margin , padding , border 제외 )
+        - height()      : 높이 반환. ( margin , padding , border 제외 )
+     -->
+</body>
+</html>

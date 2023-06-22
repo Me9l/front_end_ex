@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+
+            $(".hide").click(function () {
+                $("img[alt=image1]").animate().hide(1000);
+            });
+            $(".show").click(function () {
+                $("img[alt=image1]").animate().show(1000);
+            });
+            $(".toggle").click(function () {
+                $("img[alt=image1]")
+                    .css({
+                        width: "200px",
+                    })
+                    .slideToggle();
+            });
+
+            //
+
+            $(".fadeout").click(function () {
+                $("img[alt=image2]").fadeOut(1000);
+            });
+            $(".fadein").click(function () {
+                $("img[alt=image2]").fadeIn(1000);
+            });
+            $(".fadetoggle").click(function () {
+                $("img[alt=image2]").fadeToggle(1000);
+            });
+            $(".fadeto").click(function () {
+                $("img[alt=image2]").fadeTo(1000, 0.2);
+            });
+
+            //
+
+            $(".chain").click(function () {
+                $("img[alt=image3]")
+                .slideUp(1000)
+                .slideDown(3000)
+                .fadeTo("slow", 0.7);
+            });
+
+            
+        });
+        // 
+        function move(obj, time) {
+            $(obj).stop().animate({
+                left: 350,
+                top: 0
+            }, time);
+        }
+        function back(css) {
+            $(css).stop().animate({
+                left: 0,
+                top: 0
+            });
+        }
+        </script>
+
+    <style>
+        .moving {
+            border: 1px solid #000000;
+            margin: 20px auto 0 auto;
+            /* text-align: right; */
+            width: 550px;
+        }
+
+        .moving img {
+            cursor: pointer;
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="hide"> hide </button>
+    <button class="show"> show </button>
+    <button class="toggle"> toggle </button>
+    <br>
+    <img src="../img/special_img2.gif" alt="image1">
+    <hr>
+
+    <button class="fadeout"> fadeOut </button>
+    <button class="fadein"> fadeIn </button>
+    <button class="fadetoggle"> fadeToggle </button>
+    <button class="fadeto"> fadeTo </button>
+    <br>
+    <img src="../img/special_img2.gif" alt="image2">
+    <hr>
+
+    <button class="chain"> method chain </button>
+    <br>
+    <img src="../img/special_img1.gif" alt="image3">
+    <hr>
+
+    <div class="init">
+        <button type="button" onclick="back('.moving img')">초기화 상태</button><br>
+    </div>
+    <div class="moving">
+        <img onclick="move(this, 6000)" src="../img/image1.jpg" /><br>
+        <img onclick="move(this, 3000)" src="../img/image3.jpg" /><br>
+        <img onclick="move(this, 1000)" src="../img/image2.jpg" /><br>
+    </div>
+</body>
+
+</html>

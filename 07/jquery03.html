@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $(".qna span").hide();
+            $(".q1:first").click(function () {
+                $(".q1:last").toggle();
+            });
+            $(".q2:first").click(function () {
+                $(".q2:last").toggle();
+            });
+
+            //
+            let n = 0;
+            $(".over")
+                .css("border", "1px solid #ddd")
+                .css("background", "#aaa")
+                .css("width", "200px")
+                .mouseenter(function () {
+                $("span:first",this).text("mouseenter() has work.");
+                $("span:last",this).text(++n);
+            });
+
+            $(".out")
+                .css("border", "1px solid #000")
+                .css("background", "#ccc")
+                .css("width", "200px")
+                .mouseout(function () {
+                $("span:first",this).text("mouseout() has work.");
+                $("span:last",this).text(n);
+            });
+
+
+        });
+    </script>
+</head>
+
+<body>
+    <!-- 
+        click event
+     -->
+    <div class="qna">
+        <h2> Q1 > 문제 1 </h2>
+        <p class="q1"> [정답 보기] </p>
+        <span class="q1"> 정답 </span>
+
+        <h2> Q2 > 문제 2 </h2>
+        <p class="q2"> [정답 보기] </p>
+        <span class="q2"> 정답 </span>
+    </div>
+    <hr>
+
+    <!-- 
+        mouseenter() , mouseleave() , mousedown() , mouseup()
+     -->
+    <div class="over">
+        <p> JavaScript : onmouseover </p>
+        <p> jQuery : mouseenter() </p>
+        <span> check this </span>
+        <span> 0 </span>
+    </div>
+
+    <div class="out">
+        <p> JavaScript : onmouseover </p>
+        <p> jQuery : mouseenter() </p>
+        <span> check this </span>
+        <span> 0 </span>
+    </div>
+</body>
+
+</html>

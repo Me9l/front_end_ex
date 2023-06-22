@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <style>
+        .imp {
+            font-weight: bold;
+            font-size: 1.3rem;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            $(".contact").css(
+                {
+                    "width": "300px",
+                    "margin":"0 auto",
+                    "background-color": "#ddd",
+                    "border":"1px solid #000",
+                }
+            );
+            $(".contact tr:last").css(
+                {
+                    "text-align":"center"
+                }
+            );
+            $("button").click(function(){
+                $(".contact tr td:nth-child(2)").toggleClass("imp");
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <table class="contact">
+        <tr>
+            <th>이름</th>
+            <th>전화번호</th>
+        </tr>
+        <tr>
+            <td>박보검</td>
+            <td>010-2113-0978</td>
+        </tr>
+        <tr>
+            <td>정우성</td>
+            <td>010-5433-0140</td>
+        </tr>
+        <tr>
+            <td>조인성</td>
+            <td>010-3114-6578</td>
+        </tr>
+        <tr>
+            <td>이정재</td>
+            <td>010-3063-5412</td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button type="button">toggle</button>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>

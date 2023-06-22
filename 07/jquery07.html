@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+
+    <style>
+        .pic {
+            border: 1px solid black;
+            height: 400px;
+            text-align: center;
+        }
+
+        .pic img {
+            width: 250px;
+        }
+    </style>
+
+    <script>
+        $(document).ready(function(){
+            $("button.b1").click(function(){
+                $("img[name=pic1]").animate({"width":"100px"},1000);
+            });
+            $("button.b2").click(function(){
+                $("img[name=pic1]").animate({"width":"200px"},1000);
+            });
+            $("button.b3").click(function(){
+                $("img[name=pic1]").animate({"width":"300px"},1000);
+            });
+            $("button.b4").click(function(){
+                $("img[name=pic1]").animate().slideToggle(2000);
+            });
+
+        });
+    </script>
+</head>
+<body>
+    <!-- 
+        animate() method
+            $(selector).animate(attribute [,duration]);
+            attribute : 속성. 변경할 css 속성 및 속성 값 지정.
+            duration : 지속시간. slow , fast , 1000ms ...
+     -->
+
+     <div class="pic">
+        <p> click button </p>
+        <button class="b1"> width : 100px </button>
+        <button class="b2"> width : 200px </button>
+        <button class="b3"> width : 300px </button>
+        <button class="b4"> slideToggle </button>
+        <p/>
+        <img name="pic1" src="../img/new_08.jpg" alt="pic">
+
+     </div>
+</body>
+</html>
